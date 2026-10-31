@@ -1,5 +1,7 @@
 body {
-  max-width: 800px;
+  display: flex;
+  gap: 32px;
+  max-width: 880px;
   margin: 32px auto;
   padding: 0 16px;
   background: #fff;
@@ -7,14 +9,30 @@ body {
   font: 14px/1.45 sans-serif;
 }
 
-body.post {
-  max-width: 560px;
-  line-height: 1.6;
+nav {
+  flex: none;
+  width: 80px;
+  padding-top: 10px;
 }
 
-.post h1 {
-  margin-top: 28px;
-  font-size: 22px;
+nav a {
+  display: block;
+  margin-bottom: 6px;
+}
+
+nav a.current {
+  color: #000;
+  font-weight: 700;
+}
+
+main {
+  flex: 1;
+  min-width: 0;
+}
+
+.post main {
+  max-width: 560px;
+  line-height: 1.6;
 }
 
 a {
@@ -69,6 +87,7 @@ header {
 
 .item {
   display: flex;
+  align-items: center;
   gap: 24px;
   margin-bottom: 24px;
 }
@@ -79,9 +98,11 @@ header {
   flex: none;
 }
 
+.item p {
+  margin: 0;
+}
+
 .title {
-  display: inline-block;
-  margin-bottom: 6px;
   font-weight: 700;
 }
 
@@ -98,9 +119,22 @@ header {
 }
 
 @media (max-width: 520px) {
+  body {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  nav {
+    display: flex;
+    gap: 16px;
+    width: auto;
+    padding-top: 0;
+  }
+
   header,
   .item {
     flex-direction: column;
+    align-items: flex-start;
     gap: 10px;
   }
 }
