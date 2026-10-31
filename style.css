@@ -92,10 +92,16 @@ header {
   margin-bottom: 24px;
 }
 
-.item img {
-  display: block;
-  width: 160px;
+.thumbs {
+  display: flex;
   flex: none;
+  gap: 4px;
+}
+
+.thumbs img {
+  display: block;
+  width: auto;
+  height: 120px;
 }
 
 .item p {
