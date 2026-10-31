@@ -7,6 +7,16 @@ body {
   font: 14px/1.45 sans-serif;
 }
 
+body.post {
+  max-width: 560px;
+  line-height: 1.6;
+}
+
+.post h1 {
+  margin-top: 28px;
+  font-size: 22px;
+}
+
 a {
   color: #1772d0;
   text-decoration: none;
@@ -47,6 +57,16 @@ header {
   object-fit: cover;
 }
 
+.posts {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.posts li {
+  margin-bottom: 6px;
+}
+
 .item {
   display: flex;
   gap: 24px;
@@ -65,7 +85,15 @@ header {
   font-weight: 700;
 }
 
+.row {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 6px;
+}
+
 .date {
+  flex: none;
   color: #777;
 }
 
