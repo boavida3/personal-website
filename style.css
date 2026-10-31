@@ -1,40 +1,78 @@
 body {
-  max-width: 520px;
-  margin: 40px auto;
+  max-width: 800px;
+  margin: 32px auto;
   padding: 0 16px;
   background: #fff;
   color: #000;
-  font: 13px/1.6 Verdana, Geneva, sans-serif;
-}
-
-h1 {
-  margin: 0 0 16px;
-  font-size: 18px;
-}
-
-h2 {
-  margin: 28px 0 8px;
-  font-size: 13px;
-}
-
-ul {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-}
-
-li {
-  margin-bottom: 6px;
+  font: 14px/1.45 sans-serif;
 }
 
 a {
-  color: #00e;
+  color: #1772d0;
+  text-decoration: none;
 }
 
-a:visited {
-  color: #551a8b;
+a:hover,
+a:focus {
+  color: #f09228;
+}
+
+p {
+  margin: 0 0 14px;
+}
+
+h1,
+.name {
+  margin: 0 0 14px;
+  font-size: 32px;
+  font-weight: 400;
+}
+
+h2 {
+  margin: 32px 0 14px;
+  font-size: 22px;
+  font-weight: 400;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.photo {
+  flex: none;
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+}
+
+.item {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.item img {
+  display: block;
+  width: 160px;
+  flex: none;
+}
+
+.title {
+  display: inline-block;
+  margin-bottom: 6px;
+  font-weight: 700;
 }
 
 .date {
   color: #777;
+}
+
+@media (max-width: 520px) {
+  header,
+  .item {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
